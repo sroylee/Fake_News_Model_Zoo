@@ -1,0 +1,93 @@
+Number of feature: 12872
+
+ngram number : 1
+------------------------------------------------------------------------
+logistic regression
+Result of processed pipeline
+Model Name: Logistic Regression Count Vectorizer
+Accuracy: 0.56353591160221
+Precision score: 0.56353591160221
+F1 score: 0.7208480565371024
+Recall score: 1.0
+------------------------------------------------------------------------
+Naive Bayes 
+Result of Naive Bayes 
+Model Name: Naive Bayes
+Accuracy: 0.6132596685082873
+Precision score: 0.6117764471057884
+F1 score: 0.7144522144522144
+Recall score: 0.8585434173669467
+------------------------------------------------------------------------
+SVM-high accuracy
+Result of SVM
+Model Name: SVM
+Accuracy: 0.6132596685082873
+Precision score: 0.6117764471057884
+F1 score: 0.7144522144522144
+Recall score: 0.8585434173669467
++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++
+ngram number:2
+------------------------------------------------------------------------
+logistic regression
+Result of processed pipeline
+Model Name: Logistic Regression Count Vectorizer
+Accuracy: 0.56353591160221
+Precision score: 0.56353591160221
+F1 score: 0.7208480565371024
+Recall score: 1.0
+------------------------------------------------------------------------
+Naive Bayes 
+Result of Naive Bayes 
+Model Name: Naive Bayes
+Accuracy: 0.6195737963693765
+Precision score: 0.6078066914498141
+F1 score: 0.7307262569832402
+Recall score: 0.9159663865546218
+------------------------------------------------------------------------
+SVM-high accuracy
+Result of SVM
+Model Name: SVM
+Accuracy: 0.6195737963693765
+Precision score: 0.6078066914498141
+F1 score: 0.7307262569832402
+Recall score: 0.9159663865546218
++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++
+ngram number : 3
+------------------------------------------------------------------------
+logistic regression
+Result of processed pipeline
+Model Name: Logistic Regression Count Vectorizer
+Accuracy: 0.56353591160221
+Precision score: 0.56353591160221
+F1 score: 0.7208480565371024
+Recall score: 1.0
+------------------------------------------------------------------------
+Naive Bayes 
+Result of Naive Bayes 
+Model Name: Naive Bayes
+Accuracy: 0.6258879242304657
+Precision score: 0.6119402985074627
+F1 score: 0.7346024636058229
+Recall score: 0.9187675070028011
+------------------------------------------------------------------------
+SVM-high accuracy
+Result of SVM
+Model Name: SVM
+Accuracy: 0.6258879242304657
+Precision score: 0.6119402985074627
+F1 score: 0.7346024636058229
+Recall score: 0.9187675070028011
+
