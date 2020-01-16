@@ -24,4 +24,5 @@ These are the steps that I have taken to pre-process the dataset:
 - table
 
 #### Discussion
-
+- We observed that SVM outperformed the other methods because
+- We observed that using ngram_range(1,2) gives the best results because?
