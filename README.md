@@ -16,7 +16,7 @@ These are the steps that I have taken to pre-process the dataset:
 2. Step 2..
 
 #### Methods
-1. [Logistic Regression] (https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html): parameter configuration
+1. [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html): parameter configuration
 2. NB
 3. SVM
 
