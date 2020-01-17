@@ -1,28 +1,23 @@
 # Caim_Fake_News_Model_Zoo
 Caim Chen's CMPT400 project. 
 
-### Datasets
-1. [Facebook_Post](https://www.google.com): Which paper it is from?
 
-| Dataset        | #Posts       | Classes  |
+### Datasets
+1. [Reddit_Fake_News](https://www.cs.ucsb.edu/~william/data/liar_dataset.zip): Which paper it is from?
+
+| Dataset        | #News        | Classes  |
 | ------------- |:-------------:| -----:|
-|Facebook_Posts| xxx | Fake (xxx), Truth (xxx)|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
 
 ### Traditional Methods
 
-#### Data Pre-processing
-These are the steps that I have taken to pre-process the dataset:
-1. step 1
-2. Step 2..
+#### Data Pre-Processing
 
 #### Methods
-1. [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html): parameter configuration
-2. NB
-3. SVM
 
 #### Results
-- table
 
 #### Discussion
-- We observed that SVM outperformed the other methods because
-- We observed that using ngram_range(1,2) gives the best results because?
