@@ -3,8 +3,9 @@ Caim Chen's CMPT400 project.
 
 
 ### Datasets
-1. [Fact-Checking Facebook Politics](https://www.cs.ucsb.edu/~william/data/liar_dataset.zip): 
-2.
+1. [Fact-Checking Facebook Politics](https://www.cs.ucsb.edu/~william/data/liar_dataset.zip): Lair dataset
+2. [Fake-News-Detection-System](https://github.com/raj1603chdry/Fake-News-Detection-System/tree/master/datasets): Preprocessed Lair dataset
+
 | Dataset        | #News        | Classes  |
 | ------------- |:-------------:| -----:|
 | col 3 is      | right-aligned | $1600 |
@@ -12,11 +13,27 @@ Caim Chen's CMPT400 project.
 | zebra stripes | are neat      |    $1 |
 
 #### Data Pre-Processing
-1.
-2.
-3.
-4.
-5.
+1. Read in "Lair" dataset( train.tsv | valid.tsv | test.tsv ).
+
+2. Select columns #1 and #2 in the three input dataset, use label and news corrsponding to #1 and #2 as the new columns' name.
+
+3. Map multicalss labels to binary class labels.
+
+Reference table as follow:
+
+| Multicalss labels  | Binary labels|
+| ------------- |:-------------:|
+| true   | true |
+| mostly-true   | true |
+| half-true   | true |
+| false   | false |
+| barely-true   | false |
+| pants-fire   | false |
+
+4. Convert all string content in 'news' category in to lower case string.
+
+5. Check for dataset quality before creating .csv file ( Remove the entry contains missing values ).
+
 ### Traditional Methods
 Logistic Regression
 Naive Bayes 
