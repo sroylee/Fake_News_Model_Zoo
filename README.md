@@ -11,12 +11,17 @@ Caim Chen's CMPT400 project.
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
-
+#### Data Pre-Processing
+1.
+2.
+3.
+4.
+5.
 ### Traditional Methods
 Logistic Regression
 Naive Bayes 
 Suppoter Vector Machine 
-#### Data Pre-Processing
+
 
 #### Methods
 
