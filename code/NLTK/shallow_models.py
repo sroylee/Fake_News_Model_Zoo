@@ -5,18 +5,23 @@ import warnings
 import nltk
 import json
 import numpy as np
-nltk.download('stopwords')
+# nltk.download('stopwords')
 import pandas as pd
+import graphviz
 from nltk.corpus import stopwords
 
-from sklearn.ensemble import RandomForestClassifier, VotingClassifier
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.feature_extraction.text import (CountVectorizer,TfidfVectorizer,TfidfTransformer)
 from sklearn.linear_model import LogisticRegression
+from sklearn.tree import (DecisionTreeClassifier,export_text)
+from sklearn import tree
+
+
 from sklearn.metrics import (accuracy_score, f1_score, precision_score,
                              recall_score)
 from sklearn.model_selection import (GridSearchCV, KFold, RandomizedSearchCV,
                                      learning_curve)
-from sklearn.naive_bayes import MultinomialNB
+from sklearn.naive_bayes import (MultinomialNB,ComplementNB)
 from sklearn.pipeline import Pipeline
 
 from sklearn import (
@@ -25,7 +30,7 @@ from sklearn import (
 )
 
 from sklearn.svm import SVC
-from sklearn.tree import DecisionTreeClassifier
+
 
 # ----------------pay attention to following.
 # np.random.seed(42)
@@ -61,10 +66,9 @@ def show_eval_scores(model, test_set, model_name):
     print('F1 score: {}'.format(f1))
     print('Recall score: {}'.format(recall))
 
-train_data = pd.read_csv('train.csv')
-valid_data = pd.read_csv('valid.csv')
-#test_data = pd.read_csv('test.csv',index_col=1)
-test_data = pd.read_csv('test.csv')
+train_data = pd.read_csv('./datasets/binary/train.csv')
+valid_data = pd.read_csv('./datasets/binary/valid.csv')
+test_data = pd.read_csv('./datasets/binary/test.csv')
 
 #-----preview of sample from different data set.
 # print(train_data.sample(3))
@@ -79,66 +83,129 @@ test_data = pd.read_csv('test.csv')
 # print('Valid dataset size: {}'.format(valid_data.shape))
 # print('Test dataset size: {}'.format(test_data.shape))
 
-#combining into one
+'''
+Clear the existing index and reset it in the result by setting the ignore_index option to True.
+'''
 training_set = pd.concat([train_data, valid_data], ignore_index=True)
 print('Training set size: {}'.format(training_set.shape))
+'''
+Generate random samples from the fitted Gaussian distribution.
+5 fold cross validation will be used for hyperparameter tuning the different models
+'''
 print(training_set.sample(5))
 
-countV = CountVectorizer()
-train_count = countV.fit_transform(training_set['news'].values)
+# Two type vectorizer
+CountVec = CountVectorizer()
+TfidfVec = TfidfVectorizer()
 
-print(countV.vocabulary_)
-print('Number of feature:',len(countV.get_feature_names()))
+train_count1 = CountVec.fit_transform(training_set['news'].values)
 
-# term frequency–inverse document frequency
+train_count2 = TfidfVec.fit_transform(training_set['news'].values)
+
+''' Print the vocabulary occurrence '''
+# print(CountVec.vocabulary_)
+# print(TfidfVec.vocabulary_)
+''' Print number of features '''
+# print('Number of feature for CountVec:',len(CountVec.get_feature_names()))
+# print('Number of feature for TfidfVec:',len(TfidfVec.get_feature_names()))
+
 
 print('------------------------------------------------------------------------')
-# logistic regression-CountVectorizer
 print('logistic regression')
-print('Result of processed pipeline')
 
-lr_pipeline = Pipeline([
-    ('lrCV', CountVectorizer(stop_words=stopwords_list, lowercase=False, ngram_range=(1, 2))),
-    # ('lrCV', feature_extraction.text.CountVectorizer()),
-    ('lr_clf', LogisticRegression(C=0.0001,random_state=42, n_jobs=-1))
+# # Using CountVec
+# lr_pipe_CV = Pipeline([
+#     ('LR-CV', CountVectorizer(stop_words=stopwords_list, lowercase=False)),
+#     ('LR', LogisticRegression(C=0.0001,random_state=42, n_jobs=-1))
+# ])
+#
+# lr_pipe_CV.fit(training_set['news'], training_set['label'])
+# show_eval_scores(lr_pipe_CV, test_data, 'Logistic Regression-CV')
+
+# print()
+# Using TfidfVec + CountVec
+
+lr_tfidf = Pipeline([
+    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(3,3))),
+    ('TFIDF-Trans', TfidfTransformer()),
+    ('LR', LogisticRegression(C=0.0001,random_state=42, n_jobs=-1))
 ])
 
-lr_pipeline.fit(training_set['news'], training_set['label'])
-show_eval_scores(lr_pipeline, test_data, 'Logistic Regression Count Vectorizer')
+lr_tfidf.fit(training_set['news'], training_set['label'])
+show_eval_scores(lr_tfidf, test_data, 'Logistic Regression-CV-TFIDF')
 
-# Naive Bayes
+
 print('------------------------------------------------------------------------')
 print('Naive Bayes ')
-print('Result of Naive Bayes ')
 
-nb_pipeline = Pipeline([
-    ('nb_CV', CountVectorizer(stop_words=stopwords_list, lowercase=False, ngram_range=(1, 2))),
-    ('nb_clf', MultinomialNB(alpha=6.8))
+# Multinomial Naive Bayes
+
+nb_pipe_multi_tfidf = Pipeline([
+    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(3,3))),
+    ('TFIDF-Trans', TfidfTransformer()),
+    ('nb_Muti', MultinomialNB(alpha=6.8))
 ])
-nb_pipeline.fit(training_set['news'], training_set['label'])
-show_eval_scores(nb_pipeline, test_data, 'Naive Bayes')
+nb_pipe_multi_tfidf.fit(training_set['news'], training_set['label'])
+show_eval_scores(nb_pipe_multi_tfidf, test_data, 'MultinomialNB-CV-TFIDF')
+
+print()
+# Complement Naive Bayes
+
+''' Since the dataset is '''
+nb_pipe_Com = Pipeline([
+    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(3,3))),
+    ('TFIDF-Trans', TfidfTransformer()),
+    ('nb_comple', ComplementNB(alpha=6.8))
+])
+nb_pipe_Com.fit(training_set['news'], training_set['label'])
+show_eval_scores(nb_pipe_Com, test_data, 'ComplementNB-CV-TFIDF')
 
 # SVM
 print('------------------------------------------------------------------------')
-print('SVM-high accuracy')
-print('Result of SVM')
-SVM = pipeline.Pipeline([
-    ('counts', CountVectorizer(stop_words=stopwords_list, lowercase=False, ngram_range=(1, 2))),
-    # ('tfidf', feature_extraction.text.TfidfTransformer()),
+print('Support Vector Machine')
+SVM_tfidf = pipeline.Pipeline([
+    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(3,3))),
+    ('TFIDF-Trans', TfidfTransformer()),
     ('svm', svm.LinearSVC())
 ])
-# SVM_matic = SVM.fit_transform(training_set['news'], training_set['label'])
-SVM.fit(training_set['news'], training_set['label'])
-show_eval_scores(nb_pipeline, test_data, 'SVM')
 
-# random forest
-# print('------------------------------------------------------------------------')
-# print('random forest')
-# print('Result of random forest')
-#
-# rf_pipeline = Pipeline([
-#     ('rf_CV', CountVectorizer(stop_words=stopwords_list, lowercase=False, ngram_range=(1, 1))),
-#     ('rf_clf', RandomForestClassifier(max_depth=12, n_estimators=300, n_jobs=-1, random_state=42))
-# ])
-# rf_pipeline.fit(training_set['news'], training_set['label'])
-# show_eval_scores(rf_pipeline, test_data, 'Random Forest Classifier Count Vectorizer')
+SVM_tfidf.fit(training_set['news'], training_set['label'])
+show_eval_scores(SVM_tfidf, test_data, 'SVM-CV-TFIDF')
+
+print()
+
+'''
+Use random state 42 to fix the result of splitting the tree.
+'''
+
+print('------------------------------------------------------------------------')
+print('Decision Tree')
+
+DT_tfidf = pipeline.Pipeline([
+    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(3,3))),
+    ('TFIDF-Trans', TfidfTransformer()),
+    ('DT', DecisionTreeClassifier(random_state=42))
+])
+
+DT_tfidf.fit(training_set['news'], training_set['label'])
+show_eval_scores(DT_tfidf, test_data, 'DT-CV-TFIDF')
+
+# r = export_text(DT_tfidf)
+# print(r)
+# with open("./graph/news.dot","w") as f:
+#     dot_data = tree.export_graphviz(DT_tfidf.named_steps['DT'],out_file=f)
+# graph = graphviz.Source(dot_data)
+# graph.render("what")
+
+
+print('------------------------------------------------------------------------')
+print('Random Forest')
+
+RF_TFIDF = Pipeline([
+    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(3,3))),
+    ('TFIDF-Trans', TfidfTransformer()),
+    # ('RF', RandomForestClassifier(max_depth=12, n_estimators=300, n_jobs=-1, random_state=42))
+    ('RF', RandomForestClassifier(random_state=42))
+])
+RF_TFIDF.fit(training_set['news'], training_set['label'])
+show_eval_scores(RF_TFIDF, test_data, 'Random Forest')

@@ -1,6 +1,6 @@
 Number of feature: 12872
 
-ngram number : 1
+ngram number : 1,1
 ------------------------------------------------------------------------
 logistic regression
 Result of processed pipeline
