@@ -16,6 +16,7 @@ Caim Chen's CMPT400 project.
 | Valid| 411   | 252   |  248  | 265  |  238   | 116  |politifact |
 | Test | 424   | 249   |  270  |  252 | 214    | 93  |politifact |
 
+
 2.Preprocessed Liar Dataset
 
 | Type of usage | #True Label   | #False Label   | News Content |
@@ -26,10 +27,31 @@ Caim Chen's CMPT400 project.
 
 ---
 #### Dataset Chart
+[o_train]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/Figure/o_train.png "Trainning Dataset"
+[o_test]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/Figure/o_test.png "Testing Dataset"
+[o_valid]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/Figure/o_valid.png "Valid Dataset"
+
+[train]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/Figure/train.png "Trainning Dataset"
+[test]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/Figure/test.png "Testing Dataset"
+[valid]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/Figure/valid.png "Valid Dataset"
+
 1.Liar Dataset
+![alt text][o_train]
+
+
+![alt text][o_test]
+
+
+![alt text][o_valid]
 
 2.Preprocessed Liar Dataset
+![alt text][train]
 
+
+![alt text][test]
+
+
+![alt text][valid]
 ---
 #### Data Pre-Processing Steps
 1. Read in "Lair" dataset( train.tsv | valid.tsv | test.tsv ).
@@ -53,17 +75,103 @@ Reference table as follow:
 
 5. Check for dataset quality before creating .csv file ( Remove the entry contains missing values ).
 
+##### Reason for pre-processing
+
+1.Clean the dataset by removing factors not under consideration in current stage.(such as subject title,speaker job.)
+
+2.Improve the dataset quality by removing invalid entries.
+
+3.With binary labels, easier to do classfication.
+
+4.Increased the sample size by using binary labeled classfication, give each model more data to work with. 
+
 ---
 
-### Traditional Methods
-Logistic Regression
-Naive Bayes 
-Suppoter Vector Machine 
-Decision Tree
-Random Forest
+### Traditional Machine Learning Methods
+1.Logistic Regression.
 
-#### Methods
+2.Naive Bayes.
 
+3.Suppoter Vector Machine.
+
+4.Decision Tree.
+
+5.Random Forest.
+
+---
+### Data process steps
+#### Prepare the martix for models
+1.Read dataset files.
+
+2.Concate training and valid datasets.
+
+3.Convert a collection of text documents to a matrix of token counts
+
+4.Transform a count matrix to a normalized tf or tf-idf representation
+
+---
+#### Improve the martix
+1.Using ngram(1,2) generally,since it yeild better result compare to (1,1)(1,2)(1,3)(2,2)(3,3). Due the average words appear in each news article is around 20, considering beyond tri-gram will bring biased results. 
+
+2.Removing common stop words by using built-in stop word list for English. Clearing stop words to eliminate distracting factorseliminate distracting factors.
+
+3.In the context of text classfication, take in count of char-ngram would be unecessary. Setting analyzer string to word to eliminate distracting factors.
+
+#### Input processed matrix to corresponding models
+---
+##### Parameters changes when implementing traditional machine learning methods
+1.Logistic Regression.
+
+  + Set random_state to 42, to yeild same results for tesing purpose.
+  + Set n_jobs to -1,to use all processor which increase the speed of calculation.
+
+2.Decision Tree
+  + Change ngram_range to (1,3) due to better precision and f1-score.
+  + Use random state 42 to fix the result of splitting the tree.
+
+3.Random Forest
+  + Change ngram_range to (1,3) due to better precision and f1-score.
+  + Use random state 42 to fix the result of splitting the tree.
+  + Due to long computation time, reduce max_depth to 20 which achieves faster computation.
+  + Since max_depth is reduced, using n_estimators = 500 to slightly bringing more trees in to consideration. More chances to find a better DT.
+  + Set n_jobs to -1,to use all processor which increase the speed of calculation.
+##### Reasons for using specfic type of models
+
+1.Multinomial Naive Bayes.
+
+  + Due to bag of words brining large number of features, using multinomial NB rather than bernoulli NB.
+  
+2.Complement Naive Bayes
+
+  + Considering the propotion of imbalanced dataset, use complement NB to compare with multinomial.
+  
+---
 #### Results
 
+| Model Name  | Accuracy  | Precision score   | F1 score|Recall score|
+| ------- |----|----|----|----:|
+| Logistic Regression|   0.6227308602999211 |  0.6322869955156951  | 0.7023661270236612   |  0.7899159663865546 |
+| MultinomialNB|   0.6203630623520127 |  0.6077705827937095  | 0.732033426183844   |  0.9201680672268907 |
+| ComplementNB|  0.6203630623520127  |  0.6230200633579726  |  0.7104154124021673  | 0.8263305322128851  |
+| Support Vector Machine|   0.6211523283346487 |  0.6451612903225806  |   0.6842105263157894 |0.7282913165266106   |
+| Decision Tree|  0.5177584846093133  |  0.5791090629800307  |  0.5523809523809524  | 0.5280112044817927  |
+| Random Forest| 0.5753749013417522   |   0.5706260032102729 |  0.7255102040816327  |  0.9957983193277311 |
+
+---
 #### Discussion
+1.ComplementNB yeild better score than MultinomialNB, which proved imbalanced property does exist in the used dataset.
+
+2.Random Forest havs better F1 score and Recall score than Decision Tree, caused by more connection between features got examined.
+
+3.MultinomialNB holds the highest F1 score, entails MultinomialNB is most stable model to describe the data content.
+
+---
+
+#### Further work
+1.Considering part of speech, words belongs to noun should recieve better weights by using Universal Part-of-Speech Tagset.
+
+2.Finding new features like length of article or article subject title to increase prediction score. 
+
+3.Continue with generating visual graph of decision tree, by doing so will give clues about how to adjust max_features and bootstrap.
+
+4.Having the classfication report that describe Micro&Macro average, come up with better solution to fix imbalanced dataset.
