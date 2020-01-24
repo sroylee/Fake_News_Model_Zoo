@@ -18,7 +18,7 @@ from sklearn import tree
 
 
 from sklearn.metrics import (accuracy_score, f1_score, precision_score,
-                             recall_score)
+                             recall_score,classification_report)
 from sklearn.model_selection import (GridSearchCV, KFold, RandomizedSearchCV,
                                      learning_curve)
 from sklearn.naive_bayes import (MultinomialNB,ComplementNB)
@@ -59,12 +59,14 @@ def show_eval_scores(model, test_set, model_name):
     precision = precision_score(y_true, y_pred)
     recall = recall_score(y_true, y_pred)
     accuracy = accuracy_score(y_true, y_pred)
+    report = classification_report(y_true,y_pred)
 
     print('Model Name: {}'.format(model_name))
     print('Accuracy: {}'.format(accuracy))
     print('Precision score: {}'.format(precision))
     print('F1 score: {}'.format(f1))
     print('Recall score: {}'.format(recall))
+    print(report)
 
 train_data = pd.read_csv('./datasets/binary/train.csv')
 valid_data = pd.read_csv('./datasets/binary/valid.csv')
@@ -126,12 +128,13 @@ print('logistic regression')
 # Using TfidfVec + CountVec
 
 lr_tfidf = Pipeline([
-    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(3,3))),
+    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(1,2),analyzer = 'word')),
     ('TFIDF-Trans', TfidfTransformer()),
-    ('LR', LogisticRegression(C=0.0001,random_state=42, n_jobs=-1))
+    ('LR', LogisticRegression(random_state=42, n_jobs=-1))
 ])
 
 lr_tfidf.fit(training_set['news'], training_set['label'])
+print("Classification Report :")
 show_eval_scores(lr_tfidf, test_data, 'Logistic Regression-CV-TFIDF')
 
 
@@ -141,11 +144,12 @@ print('Naive Bayes ')
 # Multinomial Naive Bayes
 
 nb_pipe_multi_tfidf = Pipeline([
-    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(3,3))),
+    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(1,2),analyzer = 'word')),
     ('TFIDF-Trans', TfidfTransformer()),
-    ('nb_Muti', MultinomialNB(alpha=6.8))
+    ('nb_Muti', MultinomialNB())
 ])
 nb_pipe_multi_tfidf.fit(training_set['news'], training_set['label'])
+print("Classification Report :")
 show_eval_scores(nb_pipe_multi_tfidf, test_data, 'MultinomialNB-CV-TFIDF')
 
 print()
@@ -153,23 +157,25 @@ print()
 
 ''' Since the dataset is '''
 nb_pipe_Com = Pipeline([
-    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(3,3))),
+    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(1,2),analyzer = 'word')),
     ('TFIDF-Trans', TfidfTransformer()),
-    ('nb_comple', ComplementNB(alpha=6.8))
+    ('nb_comple', ComplementNB())
 ])
 nb_pipe_Com.fit(training_set['news'], training_set['label'])
+print("Classification Report :")
 show_eval_scores(nb_pipe_Com, test_data, 'ComplementNB-CV-TFIDF')
 
 # SVM
 print('------------------------------------------------------------------------')
 print('Support Vector Machine')
 SVM_tfidf = pipeline.Pipeline([
-    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(3,3))),
+    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(1,2),analyzer = 'word')),
     ('TFIDF-Trans', TfidfTransformer()),
     ('svm', svm.LinearSVC())
 ])
 
 SVM_tfidf.fit(training_set['news'], training_set['label'])
+print("Classification Report :")
 show_eval_scores(SVM_tfidf, test_data, 'SVM-CV-TFIDF')
 
 print()
@@ -182,12 +188,13 @@ print('------------------------------------------------------------------------'
 print('Decision Tree')
 
 DT_tfidf = pipeline.Pipeline([
-    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(3,3))),
+    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(1,3),analyzer = 'word')),
     ('TFIDF-Trans', TfidfTransformer()),
     ('DT', DecisionTreeClassifier(random_state=42))
 ])
 
 DT_tfidf.fit(training_set['news'], training_set['label'])
+print("Classification Report :")
 show_eval_scores(DT_tfidf, test_data, 'DT-CV-TFIDF')
 
 # r = export_text(DT_tfidf)
@@ -202,10 +209,10 @@ print('------------------------------------------------------------------------'
 print('Random Forest')
 
 RF_TFIDF = Pipeline([
-    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(3,3))),
+    ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(1,3),analyzer = 'word')),
     ('TFIDF-Trans', TfidfTransformer()),
-    # ('RF', RandomForestClassifier(max_depth=12, n_estimators=300, n_jobs=-1, random_state=42))
-    ('RF', RandomForestClassifier(random_state=42))
+    ('RF', RandomForestClassifier(max_depth=20,n_estimators=500, n_jobs=-1, random_state=42))
 ])
 RF_TFIDF.fit(training_set['news'], training_set['label'])
+print("Classification Report :")
 show_eval_scores(RF_TFIDF, test_data, 'Random Forest')
