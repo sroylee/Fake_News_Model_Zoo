@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6252a0b-7c81-4189-9356-50c5df97c3fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Result/Analyze.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Result/Analyze.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Result/Result.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Result/Result.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Result/~$Result.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Result/~$nalyze.docx" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/NLTK/muti-dataprocess.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/analyze_visualization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/generating_sets_train_valid_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/NLTK/Tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/NLTK/Tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/NLTK/datapreprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/NLTK/sample_datapreprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/NLTK/datasets/muti-class/test.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/code/NLTK/datasets/Original_muti/test.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/NLTK/datasets/muti-class/train.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/code/NLTK/datasets/Original_muti/train.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/NLTK/datasets/muti-class/valid.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/code/NLTK/datasets/Original_muti/valid.tsv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/NLTK/shallow_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/NLTK/shallow_models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +20,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Fake_News_Model_Zoo$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1579746758843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code/NLTK" />
-    <SUITE FILE_PATH="coverage/Fake_News_Model_Zoo$shallow_models.coverage" NAME="shallow_models Coverage Results" MODIFIED="1579849320408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code/NLTK" />
+    <SUITE FILE_PATH="coverage/Fake_News_Model_Zoo$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1580242943865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code/NLTK" />
+    <SUITE FILE_PATH="coverage/Fake_News_Model_Zoo$shallow_models.coverage" NAME="shallow_models Coverage Results" MODIFIED="1580428041440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code/NLTK" />
+    <SUITE FILE_PATH="coverage/Fake_News_Model_Zoo$muti_dataprocess.coverage" NAME="muti-dataprocess Coverage Results" MODIFIED="1580254332524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code/NLTK" />
     <SUITE FILE_PATH="coverage/Fake_News_Model_Zoo$counter.coverage" NAME="counter Coverage Results" MODIFIED="1579802046993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code/NLTK" />
     <SUITE FILE_PATH="coverage/Fake_News_Model_Zoo$datapreprocess.coverage" NAME="datapreprocess Coverage Results" MODIFIED="1579714066829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code/NLTK" />
   </component>
@@ -32,29 +38,33 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="counter" value="1" />
-          <entry key="csv" value="6" />
-          <entry key="py" value="19" />
-          <entry key="tsv" value="7" />
+          <entry key="csv" value="14" />
+          <entry key="png" value="2" />
+          <entry key="py" value="42" />
+          <entry key="tsv" value="8" />
+          <entry key="what" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="6" />
-          <entry key="Python" value="20" />
-          <entry key="TSV" value="7" />
+          <entry key="CSV" value="14" />
+          <entry key="Image" value="2" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="43" />
+          <entry key="TSV" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="counter" value="188" />
-          <entry key="dummy" value="12" />
-          <entry key="py" value="1052" />
+          <entry key="dummy" value="21" />
+          <entry key="py" value="4370" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="1240" />
+          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="Python" value="4558" />
         </counts>
       </usages-collector>
     </session>
@@ -62,21 +72,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/sklearn/naive_bayes.py">
+        <entry file="file://$PROJECT_DIR$/code/NLTK/muti-dataprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="669" column="43" selection-start-line="669" selection-start-column="43" selection-end-line="669" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/NLTK/Tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="39" column="23" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="23" />
+            <state relative-caret-position="222">
+              <caret line="150" column="31" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="31" />
               <folding>
-                <element signature="e#1#3#0" />
+                <element signature="e#0#8#1" />
+                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#2834#2982#1" />
+                <marker date="1580323155773" expanded="true" signature="2522:2523" ph="..." />
+                <marker date="1580323155773" expanded="true" signature="2624:2802" ph="..." />
+                <marker date="1580323155773" expanded="true" signature="4520:4562" ph="..." />
+                <marker date="1580323155773" expanded="true" signature="4610:4611" ph="..." />
+                <marker date="1580323155773" expanded="true" signature="4843:5311" ph="..." />
               </folding>
             </state>
           </provider>
@@ -85,12 +93,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/NLTK/shallow_models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="216" column="32" selection-start-line="216" selection-start-column="32" selection-end-line="216" selection-end-column="32" />
+            <state relative-caret-position="2">
+              <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#1246#2141#0" />
                 <element signature="e#2134#2182#0" />
+                <element signature="e#3746#3769#0" />
+                <element signature="e#3199#3228#0" />
                 <element signature="e#3293#3369#0" />
+                <element signature="e#7817#7844#0" />
               </folding>
             </state>
           </provider>
@@ -99,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/sklearn/metrics/_classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2684">
-              <caret line="1979" column="28" selection-start-line="1979" selection-start-column="15" selection-end-line="1979" selection-end-column="28" />
+            <state relative-caret-position="112">
+              <caret line="977" column="62" selection-start-line="977" selection-start-column="55" selection-end-line="977" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -136,8 +148,13 @@
       <find>micro</find>
       <find>Micro Average</find>
       <find>classification_report</find>
+      <find>toxic</find>
+      <find>alc</find>
       <find>accuracy_score</find>
+      <find>training_set</find>
       <find>micro average</find>
+      <find>multilabel</find>
+      <find>values</find>
     </findStrings>
     <replaceStrings>
       <replace>ngram_range=(1,3)</replace>
@@ -152,8 +169,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/code/NLTK/datapreprocess.py" />
-        <option value="$PROJECT_DIR$/code/NLTK/Tests.py" />
         <option value="$PROJECT_DIR$/code/NLTK/counter" />
+        <option value="$PROJECT_DIR$/code/generating_sets_train_valid_test.py" />
+        <option value="$PROJECT_DIR$/code/analyze_visualization.py" />
+        <option value="$PROJECT_DIR$/code/NLTK/Tests.py" />
+        <option value="$PROJECT_DIR$/code/NLTK/sample_datapreprocess.py" />
+        <option value="$PROJECT_DIR$/code/NLTK/muti-dataprocess.py" />
         <option value="$PROJECT_DIR$/code/NLTK/shallow_models.py" />
       </list>
     </option>
@@ -165,10 +186,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="y" value="-8" />
-    <option name="width" value="976" />
-    <option name="height" value="1056" />
+    <option name="x" value="-52" />
+    <option name="y" value="-7" />
+    <option name="width" value="1940" />
+    <option name="height" value="1100" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -207,7 +228,14 @@
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="NLTK" type="462c0819:PsiDirectoryNode" />
               <item name="datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="muti-class" type="462c0819:PsiDirectoryNode" />
+              <item name="v1_dataset" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fake_News_Model_Zoo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fake_News_Model_Zoo" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="NLTK" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -297,7 +325,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/NLTK/datapreprocess.py" />
+      <option name="SCRIPT_NAME" value="D:\cmpt400-project\Fake_News_Model_Zoo\code\NLTK\sample_datapreprocess.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="muti-dataprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Fake_News_Model_Zoo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code/NLTK" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/NLTK/muti-dataprocess.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -333,12 +383,14 @@
       <item itemvalue="Python.datapreprocess" />
       <item itemvalue="Python.Tests" />
       <item itemvalue="Python.shallow_models" />
+      <item itemvalue="Python.muti-dataprocess" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.shallow_models" />
-        <item itemvalue="Python.counter" />
+        <item itemvalue="Python.muti-dataprocess" />
         <item itemvalue="Python.Tests" />
+        <item itemvalue="Python.counter" />
         <item itemvalue="Python.datapreprocess" />
       </list>
     </recent_temporary>
@@ -357,14 +409,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.066593885" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.17919463" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.121475056" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.14751773" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="1.0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -382,12 +434,12 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.066593885" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17919463" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17895879" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.14751773" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -440,33 +492,6 @@
       </provider>
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/NLTK/Tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="39" column="23" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="23" />
-          <folding>
-            <element signature="e#1#3#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/NLTK/datapreprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="177" column="43" selection-start-line="177" selection-start-column="43" selection-end-line="177" selection-end-column="43" />
-          <folding>
-            <element signature="e#243#252#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/sklearn/naive_bayes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="669" column="43" selection-start-line="669" selection-start-column="43" selection-end-line="669" selection-end-column="49" />
-        </state>
       </provider>
     </entry>
     <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/sklearn/mixture/_base.py">
@@ -560,17 +585,7 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/NLTK/datasets/muti-class/train.tsv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="270">
-          <caret line="9627" column="16" selection-start-line="9627" selection-start-column="10" selection-end-line="9627" selection-end-column="16" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/NLTK/datasets/muti-class/valid.tsv">
+    <entry file="file://$PROJECT_DIR$/code/NLTK/datasets/Original_muti/valid.tsv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="13" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="13" />
@@ -580,7 +595,7 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/NLTK/datasets/muti-class/test.tsv">
+    <entry file="file://$PROJECT_DIR$/code/NLTK/datasets/Original_muti/test.tsv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="15" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="15" />
@@ -590,21 +605,186 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
+    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/sklearn/naive_bayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6032">
+          <caret line="669" column="43" selection-start-line="669" selection-start-column="43" selection-end-line="669" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/NLTK/datasets/Original_muti/train.tsv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-951">
+          <caret line="10152" column="92" selection-start-line="10152" selection-start-column="89" selection-end-line="10152" selection-end-column="92" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/NLTK/Tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="e#646#670#0" />
+            <marker date="1580242943801" expanded="true" signature="1335:1337" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../NLP course/Hands-on-NLP-with-NLTK-and-scikit-learn--master/Section 4/nlp-4.2-advanced-text-preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/analyze_visualization.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/generating_sets_train_valid_test.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../NLP course/Hands-on-NLP-with-NLTK-and-scikit-learn--master/Section 3/nlp-3-sentiment-analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-487">
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../NLP course/Hands-on-NLP-with-NLTK-and-scikit-learn--master/Section 1/nlp-6.1-nlp-pipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1424" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../NLP course/Hands-on-NLP-with-NLTK-and-scikit-learn--master/Section 1/nlp-1-natural-language-data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2026" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../NLP course/Hands-on-NLP-with-NLTK-and-scikit-learn--master/Section 4/nlp-4-ngrams.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="49" column="15" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/pandas/io/parsers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="876">
+          <caret line="692" selection-start-line="692" selection-end-line="692" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/NLTK/what">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/NLTK/graph/wc_test.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../NLP course/Hands-on-NLP-with-NLTK-and-scikit-learn--master/Section 2/nlp-2-spam-classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="33" column="30" selection-start-line="33" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/sklearn/metrics/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1278" />
+      </provider>
+    </entry>
     <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/sklearn/metrics/_classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2684">
-          <caret line="1979" column="28" selection-start-line="1979" selection-start-column="15" selection-end-line="1979" selection-end-column="28" />
+        <state relative-caret-position="112">
+          <caret line="977" column="62" selection-start-line="977" selection-start-column="55" selection-end-line="977" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/sklearn/pipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2596">
+          <caret line="131" column="8" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/sklearn/model_selection/_split.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3262">
+          <caret line="634" column="8" selection-start-line="634" selection-start-column="8" selection-end-line="634" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/NLTK/sample_datapreprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1823">
+          <caret line="173" column="24" selection-start-line="171" selection-start-column="4" selection-end-line="173" selection-end-column="24" />
+          <folding>
+            <element signature="e#243#252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/NLTK/muti-dataprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="150" column="31" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#8#1" />
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#2834#2982#1" />
+            <marker date="1580323155773" expanded="true" signature="2522:2523" ph="..." />
+            <marker date="1580323155773" expanded="true" signature="2624:2802" ph="..." />
+            <marker date="1580323155773" expanded="true" signature="4520:4562" ph="..." />
+            <marker date="1580323155773" expanded="true" signature="4610:4611" ph="..." />
+            <marker date="1580323155773" expanded="true" signature="4843:5311" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/NLTK/datasets/v1_dataset/train.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/NLTK/datasets/v1_dataset/test.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-308">
+          <caret line="1" column="57" lean-forward="true" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/NLTK/graph/wc_train.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/sklearn/model_selection/_validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-53">
+          <caret line="262" column="4" selection-start-line="262" selection-start-column="4" selection-end-line="262" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/NLTK/shallow_models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="216" column="32" selection-start-line="216" selection-start-column="32" selection-end-line="216" selection-end-column="32" />
+        <state relative-caret-position="2">
+          <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#1246#2141#0" />
             <element signature="e#2134#2182#0" />
+            <element signature="e#3746#3769#0" />
+            <element signature="e#3199#3228#0" />
             <element signature="e#3293#3369#0" />
+            <element signature="e#7817#7844#0" />
           </folding>
         </state>
       </provider>
