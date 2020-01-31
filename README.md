@@ -55,18 +55,43 @@ Caim Chen's CMPT400 project.
 
 ---
 #### Dataset Wordcloud
-[wc_train]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wc_train.png "Trainning Dataset Wordcloud"
-[wc_valid]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wc_valid.png "Validing Dataset Wordcloud"
-[wc_test]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wc_test.png "Testing Dataset Wordcloud"
 
-1.Trainning Dataset Word Cloud
-![alt text][wc_train]
+[wcbarely-true]:https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wcbarely-true.png "true"
+[wcfalse]:https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wcfalse.png "mostly-true"
+[wchalf-true]:https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wchalf-true.png "half-true "
+[wcmostly-true]:https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wcmostly-true.png "false"
+[wcpants-fire]:https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wcpants-fire.png "barely-true"
+[wctrue]:https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wctrue.png "pants-fire"
 
-2.Validing Dataset Word Cloud
-![alt text][wc_valid]
 
-3.Testing Dataset Word Cloud
-![alt text][wc_test]
+1.True Word Cloud
+![alt text][wctrue]
+
+---
+
+2.Mostly-true Word Cloud
+![alt text][wcmostly-true]
+
+---
+
+3.Half-true Word Cloud
+![alt text][wchalf-true]
+
+---
+
+4.False Word Cloud
+![alt text][wcfalse]
+
+---
+
+5.Barely-true Word Cloud
+![alt text][wcbarely-true]
+
+---
+
+6.Pants-fire Word Cloud
+![alt text][wcpants-fire]
+
 
 ---
 #### Data Pre-Processing Steps
@@ -74,8 +99,9 @@ Caim Chen's CMPT400 project.
 
 2. Select columns #1 and #2 in the three input dataset, use label and news corrsponding to #1 and #2 as the new columns' name.
 
-3. Map multicalss labels to binary class labels.
+3. Map multicalss labels to binary class labels for binary analyzing case. Muti-label analyze can directly go to Data Pre-processing Steps 6.
 
+4. After taking consider of binary labels, perform same procedure on original muti-label dataset
 Reference table as follow:
 
 | Multiclass labels  | Binary labels|
@@ -90,6 +116,10 @@ Reference table as follow:
 4. Convert all string content in 'news' category in to lower case string.
 
 5. Check for dataset quality before creating .csv file ( Remove the entry contains missing values ).
+
+6. Using StratifiedKFold methods to compute estimate confidence level for real world data.
+
+7. A data pre-processing work flow helper function is built to orginaize all above steps into one function call.
 
 ##### Reason for pre-processing
 
@@ -121,9 +151,9 @@ Reference table as follow:
 
 2.Concate training and valid datasets.
 
-3.Convert a collection of text documents to a matrix of token counts
+3.Convert a collection of text documents to a matrix of token counts.
 
-4.Transform a count matrix to a normalized tf or tf-idf representation
+4.After analyzing the word cloud for 6 categories(true,half-ture...false), word frequncies entails certain pattern for the data. Perform a TF-IDF transform to the obtained word count matrix, the result after transform is in normalized tf-idf representation matrix.
 
 ---
 #### Improve the martix
