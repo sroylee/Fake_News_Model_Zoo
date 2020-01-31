@@ -165,6 +165,7 @@ Reference table as follow:
 #### Results
 
 1. Binary Labeled Result
+
 | Model Name  | Accuracy  | Precision score   |Recall score| F1 score|
 | ------- |----|----|----|----:|
 | Logistic Regression|   0.6237308602999211 |  0.6322869955156951    |  0.7899159663865546  | 0.7023661270236612|
@@ -176,6 +177,23 @@ Reference table as follow:
 
 2. Muti Labeled Result
 
++ Logistic Regression
+![alt text][lr]
+
++ MultinomialNB
+![alt text][mnb]
+
++ ComplementNB
+![alt text][cnb]
+
++ Support Vector Machine
+![alt text][svm]
+
++ Decision Tree
+![alt text][dt]
+
++ Random Forest
+![alt text][rf]
 
 ---
 #### Discussion
