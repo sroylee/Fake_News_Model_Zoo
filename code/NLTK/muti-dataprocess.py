@@ -157,9 +157,12 @@ def display_data(path):
         print(pre_process_data(read_tsv(path)))
 
 # Display dataframe in word cloud
-def df_word_cloud(name,save_to,path):
-    df = read_csv_file(path)
-    text = df.news.values
+def df_word_cloud(name,save_to,path=None,df_read=None):
+    if(path is None):
+        text = df_read.news.values
+    else:
+        df = read_csv_file(path)
+        text = df.news.values
     wordcloud = WordCloud(
         width=3000,
         height=2000,
@@ -189,15 +192,33 @@ save_to = "./datasets/v1_dataset/"
 # Saving the dataframe into csv
 # Lower case format into csv
 # Check for invalid row
-func_compose(csv_gen,pre_process_data,read_tsv,save_to,"train.csv")(train)
-func_compose(csv_gen,pre_process_data,read_tsv,save_to,"valid.csv")(valid)
-func_compose(csv_gen,pre_process_data,read_tsv,save_to,"test.csv")(test)
+#
+# func_compose(csv_gen,pre_process_data,read_tsv,save_to,"train.csv")(train)
+# func_compose(csv_gen,pre_process_data,read_tsv,save_to,"valid.csv")(valid)
+# func_compose(csv_gen,pre_process_data,read_tsv,save_to,"test.csv")(test)
+
 #display as wordcloud
 # name saveto path
-df_word_cloud("wc_train.png","./graph/","./datasets/v1_dataset/train.csv")
-df_word_cloud("wc_valid.png","./graph/","./datasets/v1_dataset/valid.csv")
-df_word_cloud("wc_test.png","./graph/","./datasets/v1_dataset/test.csv")
+# df_word_cloud("wc_train.png","./graph/","./datasets/v1_dataset/train.csv")
+# df_word_cloud("wc_valid.png","./graph/","./datasets/v1_dataset/valid.csv")
+# df_word_cloud("wc_test.png","./graph/","./datasets/v1_dataset/test.csv")
+
+train_v1 = read_csv_file("./datasets/v1_dataset/train.csv")
+valid_v1 = read_csv_file("./datasets/v1_dataset/valid.csv")
+test_v1 = read_csv_file("./datasets/v1_dataset/test.csv")
+tio = pd.concat([train_v1,valid_v1,test_v1],ignore_index=True)
+
+labels = ['true','mostly-true','half-true','false','barely-true','pants-fire']
+for x in labels:
+    df_word_cloud("wc" + x + ".png", "./graph/", df_read=tio[tio['label'] == x])
 
 
+
+# 	true
+# mostly-true	true
+# half-true	true
+# false	false
+# barely-true	false
+# pants-fire
 
 
