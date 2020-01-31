@@ -175,7 +175,20 @@ Reference table as follow:
 | Decision Tree|  0.5177584846093133  |  0.5791090629800307    | 0.5280112044817927  |  0.5523809523809524|
 | Random Forest| 0.5753749013417522   |   0.5706260032102729   |  0.9957983193277311 |  0.7255102040816327|
 
+---
 2. Muti Labeled Result
+
+[lr]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/lr.PNG "lr"
+
+[mnb]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/mnb.PNG "mnb"
+
+[cnb]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/cnb.PNG "cnb"
+
+[svm]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/svm.PNG "svm"
+
+[dt]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/dt.PNG "dt"
+
+[rf]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/rf.PNG "rf"
 
 + Logistic Regression
 ![alt text][lr]
