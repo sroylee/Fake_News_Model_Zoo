@@ -52,6 +52,22 @@ Caim Chen's CMPT400 project.
 
 
 ![alt text][valid]
+
+---
+#### Dataset Wordcloud
+[wc_train]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wc_train.png "Trainning Dataset Wordcloud"
+[wc_valid]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wc_valid.png "Validing Dataset Wordcloud"
+[wc_test]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wc_test.png "Testing Dataset Wordcloud"
+
+1.Trainning Dataset Word Cloud
+![alt text][wc_train]
+
+2.Validing Dataset Word Cloud
+![alt text][wc_valid]
+
+3.Testing Dataset Word Cloud
+![alt text][wc_test]
+
 ---
 #### Data Pre-Processing Steps
 1. Read in "Lair" dataset( train.tsv | valid.tsv | test.tsv ).
@@ -148,14 +164,18 @@ Reference table as follow:
 ---
 #### Results
 
-| Model Name  | Accuracy  | Precision score   | F1 score|Recall score|
+1. Binary Labeled Result
+| Model Name  | Accuracy  | Precision score   |Recall score| F1 score|
 | ------- |----|----|----|----:|
-| Logistic Regression|   0.6227308602999211 |  0.6322869955156951  | 0.7023661270236612   |  0.7899159663865546 |
-| MultinomialNB|   0.6203630623520127 |  0.6077705827937095  | 0.732033426183844   |  0.9201680672268907 |
-| ComplementNB|  0.6203630623520127  |  0.6230200633579726  |  0.7104154124021673  | 0.8263305322128851  |
-| Support Vector Machine|   0.6211523283346487 |  0.6451612903225806  |   0.6842105263157894 |0.7282913165266106   |
-| Decision Tree|  0.5177584846093133  |  0.5791090629800307  |  0.5523809523809524  | 0.5280112044817927  |
-| Random Forest| 0.5753749013417522   |   0.5706260032102729 |  0.7255102040816327  |  0.9957983193277311 |
+| Logistic Regression|   0.6237308602999211 |  0.6322869955156951    |  0.7899159663865546  | 0.7023661270236612|
+| MultinomialNB|   0.6203630623520127 |  0.6077705827937095     |  0.9201680672268907 | 0.732033426183844|
+| ComplementNB|  0.6203630623520127  |  0.6230200633579726    | 0.8263305322128851  |  0.7104154124021673|
+| Support Vector Machine|   0.6211523283346487 |  0.6451612903225806   |0.7282913165266106   |   0.6842105263157894|
+| Decision Tree|  0.5177584846093133  |  0.5791090629800307    | 0.5280112044817927  |  0.5523809523809524|
+| Random Forest| 0.5753749013417522   |   0.5706260032102729   |  0.9957983193277311 |  0.7255102040816327|
+
+2. Muti Labeled Result
+
 
 ---
 #### Discussion
