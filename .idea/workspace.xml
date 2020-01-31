@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6252a0b-7c81-4189-9356-50c5df97c3fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/code/NLTK/muti-dataprocess.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/analyze_visualization.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/generating_sets_train_valid_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/NLTK/Tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/NLTK/Tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/NLTK/datapreprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/NLTK/sample_datapreprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/NLTK/datasets/muti-class/test.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/code/NLTK/datasets/Original_muti/test.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/NLTK/datasets/muti-class/train.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/code/NLTK/datasets/Original_muti/train.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/NLTK/datasets/muti-class/valid.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/code/NLTK/datasets/Original_muti/valid.tsv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/NLTK/shallow_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/NLTK/shallow_models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +13,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Fake_News_Model_Zoo$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1580242943865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code/NLTK" />
-    <SUITE FILE_PATH="coverage/Fake_News_Model_Zoo$shallow_models.coverage" NAME="shallow_models Coverage Results" MODIFIED="1580428041440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code/NLTK" />
+    <SUITE FILE_PATH="coverage/Fake_News_Model_Zoo$shallow_models.coverage" NAME="shallow_models Coverage Results" MODIFIED="1580441664829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code/NLTK" />
     <SUITE FILE_PATH="coverage/Fake_News_Model_Zoo$muti_dataprocess.coverage" NAME="muti-dataprocess Coverage Results" MODIFIED="1580254332524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code/NLTK" />
     <SUITE FILE_PATH="coverage/Fake_News_Model_Zoo$counter.coverage" NAME="counter Coverage Results" MODIFIED="1579802046993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code/NLTK" />
     <SUITE FILE_PATH="coverage/Fake_News_Model_Zoo$datapreprocess.coverage" NAME="datapreprocess Coverage Results" MODIFIED="1579714066829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code/NLTK" />
@@ -40,7 +32,8 @@
           <entry key="counter" value="1" />
           <entry key="csv" value="14" />
           <entry key="png" value="2" />
-          <entry key="py" value="42" />
+          <entry key="process" value="1" />
+          <entry key="py" value="44" />
           <entry key="tsv" value="8" />
           <entry key="what" value="1" />
         </counts>
@@ -49,8 +42,8 @@
         <counts>
           <entry key="CSV" value="14" />
           <entry key="Image" value="2" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="43" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Python" value="45" />
           <entry key="TSV" value="8" />
         </counts>
       </usages-collector>
@@ -58,13 +51,14 @@
         <counts>
           <entry key="counter" value="188" />
           <entry key="dummy" value="21" />
-          <entry key="py" value="4370" />
+          <entry key="process" value="7" />
+          <entry key="py" value="4873" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="21" />
-          <entry key="Python" value="4558" />
+          <entry key="PLAIN_TEXT" value="28" />
+          <entry key="Python" value="5061" />
         </counts>
       </usages-collector>
     </session>
@@ -90,20 +84,50 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/NLTK/shallow_models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
-              <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
+            <state relative-caret-position="1">
+              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#1246#2141#0" />
                 <element signature="e#2134#2182#0" />
-                <element signature="e#3746#3769#0" />
                 <element signature="e#3199#3228#0" />
                 <element signature="e#3293#3369#0" />
-                <element signature="e#7817#7844#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/process">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="21" />
+              <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="21" />
+              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="21" />
+              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="21" />
+              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="21" />
+              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/imblearn/pipeline.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="623">
+              <caret line="286" selection-start-line="286" selection-end-line="286" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/pandas/core/reshape/concat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1338">
+              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -155,6 +179,8 @@
       <find>micro average</find>
       <find>multilabel</find>
       <find>values</find>
+      <find>pipeline</find>
+      <find>Pipeline</find>
     </findStrings>
     <replaceStrings>
       <replace>ngram_range=(1,3)</replace>
@@ -175,6 +201,7 @@
         <option value="$PROJECT_DIR$/code/NLTK/Tests.py" />
         <option value="$PROJECT_DIR$/code/NLTK/sample_datapreprocess.py" />
         <option value="$PROJECT_DIR$/code/NLTK/muti-dataprocess.py" />
+        <option value="$PROJECT_DIR$/code/process" />
         <option value="$PROJECT_DIR$/code/NLTK/shallow_models.py" />
       </list>
     </option>
@@ -185,7 +212,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-52" />
     <option name="y" value="-7" />
     <option name="width" value="1940" />
@@ -230,13 +257,6 @@
               <item name="datasets" type="462c0819:PsiDirectoryNode" />
               <item name="v1_dataset" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Fake_News_Model_Zoo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake_News_Model_Zoo" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="NLTK" type="462c0819:PsiDirectoryNode" />
-              <item name="graph" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -248,7 +268,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -773,19 +793,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/pandas/core/reshape/concat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1338">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Python37-32/Lib/site-packages/imblearn/pipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="286" selection-start-line="286" selection-end-line="286" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/NLTK/shallow_models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
+        <state relative-caret-position="1">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#1246#2141#0" />
             <element signature="e#2134#2182#0" />
-            <element signature="e#3746#3769#0" />
             <element signature="e#3199#3228#0" />
             <element signature="e#3293#3369#0" />
-            <element signature="e#7817#7844#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/process">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="21" />
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="21" />
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="21" />
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="21" />
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="21" />
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>

@@ -17,12 +17,17 @@ from sklearn.model_selection import (StratifiedKFold,StratifiedShuffleSplit,cros
 from sklearn.base import clone as skclone
 from sklearn.tree import (DecisionTreeClassifier,export_text)
 
+# data resample
+from sklearn.utils import resample
+import imblearn as imbalan
+from imblearn.pipeline import make_pipeline
+from imblearn.over_sampling import RandomOverSampler
+
 from sklearn.metrics import (accuracy_score, f1_score, precision_score,
                              recall_score,classification_report)
 from sklearn.model_selection import (GridSearchCV, KFold, RandomizedSearchCV,
                                      learning_curve)
 from sklearn.naive_bayes import (MultinomialNB,ComplementNB)
-from sklearn.pipeline import Pipeline
 
 from sklearn import (
     datasets, feature_extraction, model_selection, pipeline,
@@ -75,6 +80,7 @@ train_data = pd.read_csv(path2 + 'train.csv')
 valid_data = pd.read_csv(path2 + 'valid.csv')
 test_data = pd.read_csv(path2 + 'test.csv')
 
+
 #-----preview of sample from different data set.
 # print(train_data.sample(3))
 # print()
@@ -91,14 +97,18 @@ test_data = pd.read_csv(path2 + 'test.csv')
 '''
 Clear the existing index and reset it in the result by setting the ignore_index option to True.
 '''
+
+
+
 training_set = pd.concat([train_data, valid_data], ignore_index=True)
 print('Training set size: {}'.format(training_set.shape))
-'''
-Generate random samples from the fitted Gaussian distribution.
-5 fold cross validation will be used for hyperparameter tuning the different models
-'''
-# print(training_set.sample(5))
 
+print(training_set.sample(5))
+
+"""
+Upsampling: Where you increase the frequency of the samples, such as from minutes to seconds.
+Downsampling: Where you decrease the frequency of the samples, such as from days to months.
+"""
 
 
 # # Two type vectorizer
@@ -131,7 +141,7 @@ print('logistic regression')
 
 # Using TfidfVec + CountVec
 
-lr_tfidf = Pipeline([
+lr_tfidf = pipeline.Pipeline([
     ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(1,2),analyzer = 'word')),
     ('TFIDF-Trans', TfidfTransformer()),
     ('LR', LogisticRegression(random_state=42, n_jobs=-1,max_iter=1000))
@@ -152,11 +162,14 @@ print('Naive Bayes ')
 
 # Multinomial Naive Bayes
 
-nb_pipe_multi_tfidf = Pipeline([
+nb_pipe_multi_tfidf = pipeline.Pipeline([
     ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(1,2),analyzer = 'word')),
     ('TFIDF-Trans', TfidfTransformer()),
     ('nb_Muti', MultinomialNB())
 ])
+
+
+
 nb_muti_cv = skclone(nb_pipe_multi_tfidf)
 nb_pipe_multi_tfidf.fit(training_set['news'], training_set['label'])
 print("Classification Report :")
@@ -173,7 +186,7 @@ print()
 # Complement Naive Bayes
 
 ''' Since the dataset is imbalance '''
-nb_pipe_Com = Pipeline([
+nb_pipe_Com = pipeline.Pipeline([
     ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(1,2),analyzer = 'word')),
     ('TFIDF-Trans', TfidfTransformer()),
     ('nb_comple', ComplementNB())
@@ -242,7 +255,7 @@ print()
 print('------------------------------------------------------------------------')
 print('Random Forest')
 
-RF_TFIDF = Pipeline([
+RF_TFIDF = pipeline.Pipeline([
     ('CV', CountVectorizer(stop_words=stopwords_list, lowercase=False,ngram_range=(1,3),analyzer = 'word')),
     ('TFIDF-Trans', TfidfTransformer()),
     ('RF', RandomForestClassifier(max_depth=20,n_estimators=500, n_jobs=-1, random_state=42))
