@@ -195,48 +195,50 @@ Reference table as follow:
 #### Results
 
 1. Binary Labeled Result
+  + StratifiedKFold
+  
+Model Name|Accuracy|Precision|Recall|F1 score
+-|-|-|-|-
+logistic regression |0.62 |0.61 |0.62 |0.60
+Multinomial Naive Bayes |0.60 |0.62 |0.60 |0.55
+Complement Naive Bayes |0.25 |0.25 |0.25 |0.24
+Support Vector Machine |0.61 |0.60 |0.61 |0.60
+Decision Tree |0.55 |0.55 |0.55 |0.55
+Random Forest |0.57 |0.64 |0.57 |0.43
 
-| Model Name  | Accuracy  | Precision score   |Recall score| F1 score|
-| ------- |----|----|----|----:|
-| Logistic Regression|   0.6237308602999211 |  0.6322869955156951    |  0.7899159663865546  | 0.7023661270236612|
-| MultinomialNB|   0.6203630623520127 |  0.6077705827937095     |  0.9201680672268907 | 0.732033426183844|
-| ComplementNB|  0.6203630623520127  |  0.6230200633579726    | 0.8263305322128851  |  0.7104154124021673|
-| Support Vector Machine|   0.6211523283346487 |  0.6451612903225806   |0.7282913165266106   |   0.6842105263157894|
-| Decision Tree|  0.5177584846093133  |  0.5791090629800307    | 0.5280112044817927  |  0.5523809523809524|
-| Random Forest| 0.5753749013417522   |   0.5706260032102729   |  0.9957983193277311 |  0.7255102040816327|
+  + Test
+  
+Model Name|Accuracy|Precision|Recall|F1 score
+-|-|-|-|-
+logistic regression |0.62 |0.62 |0.62 |0.61
+Multinomial Naive Bayes |0.62 |0.65 |0.62 |0.56
+Complement Naive Bayes |0.25 |0.25 |0.25 |0.25
+Support Vector Machine |0.62 |0.62 |0.62 |0.62
+Decision Tree |0.52 |0.52 |0.52 |0.52
+Random Forest |0.58 |0.70 |0.58 |0.44
 
 ---
 2. Muti Labeled Result
-
-[lr]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/lr.PNG "lr"
-
-[mnb]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/mnb.PNG "mnb"
-
-[cnb]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/cnb.PNG "cnb"
-
-[svm]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/svm.PNG "svm"
-
-[dt]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/dt.PNG "dt"
-
-[rf]: https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/rf.PNG "rf"
-
-+ Logistic Regression
-![alt text][lr]
-
-+ MultinomialNB
-![alt text][mnb]
-
-+ ComplementNB
-![alt text][cnb]
-
-+ Support Vector Machine
-![alt text][svm]
-
-+ Decision Tree
-![alt text][dt]
-
-+ Random Forest
-![alt text][rf]
+  + StratifiedKFold
+  
+Model Name|Accuracy|Precision|Recall|F1 score
+-|-|-|-|-
+logistic regression |0.25 |0.28 |0.25 |0.24
+Multinomial Naive Bayes |0.24 |0.23 |0.24 |0.19
+Complement Naive Bayes |0.25 |0.25 |0.25 |0.24
+Support Vector Machine |0.24 |0.24 |0.24 |0.24
+Decision Tree |0.21 |0.20 |0.21 |0.20
+Random Forest |0.22 |0.17 |0.22 |0.14
+  + Test
+  
+Model Name|Accuracy|Precision|Recall|F1 score
+-|-|-|-|-
+logistic regression |0.25 |0.26 |0.25 |0.24
+Multinomial Naive Bayes |0.23 |0.22 |0.23 |0.19
+Complement Naive Bayes |0.25 |0.25 |0.25 |0.25
+Support Vector Machine |0.25 |0.25 |0.25 |0.25
+Decision Tree |0.21 |0.20 |0.21 |0.20
+Random Forest |0.21 |0.13 |0.21 |0.13
 
 ---
 #### Discussion
