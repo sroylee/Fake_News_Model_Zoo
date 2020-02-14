@@ -2,19 +2,27 @@
 Caim Chen's CMPT400 project. 
 
 # Log for week Feb 10th
-1. Clean up the shallow models' code, and updated structure. ( Now can choose a different version of data set to use, and more robust.)
+1.Clean up the shallow models' code, and updated structure. ( Now can choose a different version of data set to use, and more robust.)
 
-2. Updated the summary structure in the README file.
+2.Updated the summary structure in the README file.
 
 3.Took online udemy course on CNN, implemented dogs and cats classification.
 
-4. Follow [Text Classification Tutorial](https://realpython.com/python-keras-text-classification/), implemented CNN for fake news detection. CNN model performed ok on validation dataset, but it has clear overfitting results on testing set.
+4.Follow [Text Classification Tutorial](https://realpython.com/python-keras-text-classification/), implemented CNN for fake news detection. CNN model performed ok on validation dataset, but it has clear overfitting results on testing set.
 
 5.Validation dataset: accu from 20% ~ 25%,loss from 1.8 ~ 1.7. Testing dataset: accu 16%
 
-5.Added in glove matrix based on (glove.6B.50d.txt), shows 93% coverage on the vocabulary.
+6.Added in glove matrix based on (glove.6B.50d.txt), shows 93% coverage on the vocabulary.
 
-6.Validation dataset: accu from 20% ~ 26%,loss from 1.8 ~ 1.7.Testing dataset: accu 16~18%
+7.Validation dataset: accu from 20% ~ 26%,loss from 1.8 ~ 1.7.Testing dataset: accu 16~18%
+
+Conclusion(Diffculties):
+
+1.Model learned too well and caused overfitting.
+
+2.Article body pattern in train, valid and test dataset might be too distinct for model to understand and predict due to lack of background knowledge.
+
+3.Unable to build a model that reduce bias and variance at same time.
 
 # Shallow Models
 ### Datasets
