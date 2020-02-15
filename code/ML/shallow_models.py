@@ -31,8 +31,8 @@ import markdown_table as mt
 
 
 
-path1 = 'D:/cmpt400-project/Fake_News_Model_Zoo/code/NLTK/datasets/binary/'
-path2 = 'D:/cmpt400-project/Fake_News_Model_Zoo/code/NLTK/datasets/v1_dataset/'
+path1 = 'D:/cmpt400-project/Fake_News_Model_Zoo/code/datasets/binary/'
+path2 = 'D:/cmpt400-project/Fake_News_Model_Zoo/code/datasets/v1_dataset/'
 
 def read_data(datatype):
     if datatype == 'binary':

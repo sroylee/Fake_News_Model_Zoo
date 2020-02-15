@@ -16,7 +16,7 @@ DT_tfidf = pipeline.Pipeline([
     ('TFIDF-Trans', TfidfTransformer()),
     ('DT', DecisionTreeClassifier(random_state=42))
 ])
-me("muti",DT_tfidf,"Decision Tree")
+me("binary",DT_tfidf,"Decision Tree")
 
 print('------------------------------------------------------------------------')
 print('Random Forest')
@@ -26,4 +26,4 @@ RF_TFIDF = pipeline.Pipeline([
     ('TFIDF-Trans', TfidfTransformer()),
     ('RF', RandomForestClassifier(max_depth=20,n_estimators=500, n_jobs=-1, random_state=42))
 ])
-me("muti",RF_TFIDF,"Random Forest")
+me("binary",RF_TFIDF,"Random Forest")

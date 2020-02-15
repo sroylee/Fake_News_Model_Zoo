@@ -175,10 +175,9 @@ def check_dataset_quality(dataset, dataset_name):
 
 
 # File paths of the dataset to be read
-train_path = 'code/NLTK/datasets/train.tsv'
-valid_path = 'code/NLTK/datasets/valid.tsv'
-test_path = 'code/NLTK/datasets/test.tsv'
-
+train_path = 'D:/cmpt400-project/Fake_News_Model_Zoo/code/datasets/Original_muti/train.tsv'
+valid_path = 'D:/cmpt400-project/Fake_News_Model_Zoo/code/datasets/Original_muti/valid.tsv'
+test_path = 'D:/cmpt400-project/Fake_News_Model_Zoo/code/datasets/Original_muti/test.tsv'
 train_data = read_tsv(train_path)
 valid_data = read_tsv(valid_path)
 test_data = read_tsv(test_path)
@@ -189,7 +188,7 @@ valid_data = preprocess_dataset(valid_data)
 test_data = preprocess_dataset(test_data)
 
 # Path for saving the files
-save_path = 'code/NLTK/datasets/'
+save_path = 'D:/cmpt400-project/Fake_News_Model_Zoo/code/datasets/v1_dataset/'
 
 # Checking the quality of the dataset
 check_dataset_quality(train_data, 'Train dataset')

@@ -51,13 +51,6 @@ The New Benchmark Dataset for Fake News Detection
 LINK: https://www.cs.ucsb.edu/~william/data/liar_dataset.zip
 
 2019-03-02
-
-
-
-
-
-
-
 """
 import os
 import warnings
@@ -181,11 +174,11 @@ def df_word_cloud(name,save_to,path=None,df_read=None):
 
 # File paths:
 # Data file paths:
-train = "./datasets/Original_muti/train.tsv"
-valid = "./datasets/Original_muti/valid.tsv"
-test = "./datasets/Original_muti/test.tsv"
+train = 'D:/cmpt400-project/Fake_News_Model_Zoo/code/datasets/Original_muti/train.tsv'
+valid = 'D:/cmpt400-project/Fake_News_Model_Zoo/code/datasets/Original_muti/valid.tsv'
+test = 'D:/cmpt400-project/Fake_News_Model_Zoo/code/datasets/Original_muti/test.tsv'
 # Where to save:
-save_to = "./datasets/v1_dataset/"
+save_to = 'D:/cmpt400-project/Fake_News_Model_Zoo/code/datasets/v1_dataset/'
 # -----------------------------------------------
 # All convert to data frame format
 # Pre-process
@@ -193,9 +186,9 @@ save_to = "./datasets/v1_dataset/"
 # Lower case format into csv
 # Check for invalid row
 #
-# func_compose(csv_gen,pre_process_data,read_tsv,save_to,"train.csv")(train)
-# func_compose(csv_gen,pre_process_data,read_tsv,save_to,"valid.csv")(valid)
-# func_compose(csv_gen,pre_process_data,read_tsv,save_to,"test.csv")(test)
+func_compose(csv_gen,pre_process_data,read_tsv,save_to,"train.csv")(train)
+func_compose(csv_gen,pre_process_data,read_tsv,save_to,"valid.csv")(valid)
+func_compose(csv_gen,pre_process_data,read_tsv,save_to,"test.csv")(test)
 
 #display as wordcloud
 # name saveto path
@@ -203,14 +196,13 @@ save_to = "./datasets/v1_dataset/"
 # df_word_cloud("wc_valid.png","./graph/","./datasets/v1_dataset/valid.csv")
 # df_word_cloud("wc_test.png","./graph/","./datasets/v1_dataset/test.csv")
 
-train_v1 = read_csv_file("./datasets/v1_dataset/train.csv")
-valid_v1 = read_csv_file("./datasets/v1_dataset/valid.csv")
-test_v1 = read_csv_file("./datasets/v1_dataset/test.csv")
+train_v1 = read_csv_file("D:/cmpt400-project/Fake_News_Model_Zoo/code/datasets/v1_dataset/train.csv")
+valid_v1 = read_csv_file("D:/cmpt400-project/Fake_News_Model_Zoo/code/datasets/v1_dataset/valid.csv")
+test_v1 = read_csv_file("D:/cmpt400-project/Fake_News_Model_Zoo/code/datasets/v1_dataset/test.csv")
 tio = pd.concat([train_v1,valid_v1,test_v1],ignore_index=True)
-
 labels = ['true','mostly-true','half-true','false','barely-true','pants-fire']
 for x in labels:
-    df_word_cloud("wc" + x + ".png", "./graph/", df_read=tio[tio['label'] == x])
+    df_word_cloud("wc" + x + ".png", "D:/cmpt400-project/Fake_News_Model_Zoo/code/graph/", df_read=tio[tio['label'] == x])
 
 
 

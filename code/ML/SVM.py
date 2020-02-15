@@ -13,4 +13,4 @@ SVM_tfidf = pipeline.Pipeline([
     ('TFIDF-Trans', TfidfTransformer()),
     ('svm', svm.LinearSVC())
 ])
-me("muti",SVM_tfidf,"Support Vector Machine")
+me("binary",SVM_tfidf,"Support Vector Machine")

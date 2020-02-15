@@ -19,4 +19,4 @@ lr_tfidf = pipeline.Pipeline([
     ('LR', LogisticRegression(random_state=42, n_jobs=-1,max_iter=1000))
 ])
 
-me("muti",lr_tfidf,"logistic regression")
+me("binary",lr_tfidf,"logistic regression")

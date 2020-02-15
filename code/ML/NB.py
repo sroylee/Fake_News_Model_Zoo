@@ -18,7 +18,7 @@ nb_pipe_multi_tfidf = pipeline.Pipeline([
     ('TFIDF-Trans', TfidfTransformer()),
     ('nb_Muti', MultinomialNB())
 ])
-me("muti",nb_pipe_multi_tfidf,"Multinomial Naive Bayes")
+me("binary",nb_pipe_multi_tfidf,"Multinomial Naive Bayes")
 # ++++++++++++++++++++++++++++++
 
 print()
