@@ -1,6 +1,20 @@
 # Caim_Fake_News_Model_Zoo
 Caim Chen's CMPT400 project. 
 
+# Log for week Feb 17th 
+Code for CNN can be found under Fake_News_Model_Zoo/code/DL/FakeNewsCNN.ipynb
+
+1.Refactored directory names.
+
+2.Switch from glove.6B.50d.txt to GoogleNews-vectors-negative300.bin as a better embedding option. ( More reliable for news detection )
+
+3.Adjusted parameters to match the paper description.
+
+4.Tried different learning rates, Maxpooling, Averagepooling, optimizer and embedding's trainable option.
+
+5.Able to achieve better accuracy on the testing set. accu : 18~20%, still cannot match 26% accuracy according to the paper description.
+
+
 # Log for week Feb 10th
 1.Clean up the shallow models' code, and updated structure. ( Now can choose a different version of data set to use, and more robust.)
 
