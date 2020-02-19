@@ -14,6 +14,11 @@ Code for CNN can be found under Fake_News_Model_Zoo/code/DL/FakeNewsCNN.ipynb
 
 5.Able to achieve better accuracy on the testing set. accu : 18~20%, still cannot match 26% accuracy according to the paper description.
 
+6.Changed to the unprocessed version of the data with punctuation removed, still unable to match the results. However, I was able to remove one error that caused validation set accuracy to reach 26%. ( Might missing something during setting up the input dataset )
+
+7.After took the udemy online course on RNN and LSTM, follow and implemented the LSTM that does prediction on the stock price.
+
+8.
 
 # Log for week Feb 10th
 1.Clean up the shallow models' code, and updated structure. ( Now can choose a different version of data set to use, and more robust.)
