@@ -4,21 +4,21 @@ Caim Chen's CMPT400 project.
 # Log for week Feb 17th 
 Code for CNN can be found under Fake_News_Model_Zoo/code/DL/FakeNewsCNN.ipynb
 
-1.Refactored directory names.
+1.Refactored directory layout.
 
 2.Switch from glove.6B.50d.txt to GoogleNews-vectors-negative300.bin as a better embedding option. ( More reliable for news detection )
 
-3.Adjusted parameters to match the paper description.
+3.Adjusted parameters to match the paper description for CNN.
 
 4.Tried different learning rates, Maxpooling, Averagepooling, optimizer and embedding's trainable option.
 
-5.Able to achieve better accuracy on the testing set. accu : 18~20%, still cannot match 26% accuracy according to the paper description.
+5.Able to achieve better accuracy on the testing set. accu : 19~20%, still cannot match 26% accuracy according to the paper description.
 
 6.Changed to the unprocessed version of the data with punctuation removed, still unable to match the results. However, I was able to remove one error that caused validation set accuracy to reach 26%. ( Might missing something during setting up the input dataset )
 
-7.After took the udemy online course on RNN and LSTM, follow and implemented the LSTM that does prediction on the stock price.
+7.After took the udemy online course on RNN and LSTM, followed the tutorial and implemented the LSTM that does prediction on the stock price.
 
-8.
+8.Implement Bi-LSTM, paper has 22%-23% accuracy on validation and testing set. However, my implementation only yield an accuracy to 19%.
 
 # Log for week Feb 10th
 1.Clean up the shallow models' code, and updated structure. ( Now can choose a different version of data set to use, and more robust.)
