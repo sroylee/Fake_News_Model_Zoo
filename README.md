@@ -1,10 +1,15 @@
 # Caim_Fake_News_Model_Zoo
 Caim Chen's CMPT400 project. 
 # Log for week Mar 1st
+
 1.Redo everything for data pre-processing. Vocabulary coverage is 78% before any pre-process been done. ( cleaned symbol,punctuation,number,different spelling in each region. Possible for further mis-spelling cleaning )
+
 2.Redo everything for embedding creation. Achieved average of 99% vocabulary coverage after applying all pre-processing.
+
 3.Adjust optimizers' hyperparameters to achieve better performance.
+
 4.Saving the best model for later uses.
+
 5.CNN accuracy is now 25~26%, BiLSTM accuracy is now 21~22%. Matched the Liar result, able to proceed to the next step.
 
 # Log for week Feb 17th 
