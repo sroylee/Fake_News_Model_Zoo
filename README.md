@@ -10,7 +10,7 @@ Caim Chen's CMPT400 project.
 
 4.Saving the best model for later uses.
 
-5.CNN accuracy is now 25~26%, BiLSTM accuracy is now 21~22%. Matched the Liar result, able to proceed to the next step.
+5.CNN accuracy is now around 26%, BiLSTM accuracy is now around 22%. Matched the Liar result, able to proceed to the next step.
 
 # Log for week Feb 17th 
 Code for CNN can be found under Fake_News_Model_Zoo/code/DL/FakeNewsCNN.ipynb
