@@ -121,12 +121,12 @@ Conclusion(Diffculties):
 ---
 #### Dataset Wordcloud
 
-[wcbarely-true]:https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wcbarely-true.png "true"
-[wcfalse]:https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wcfalse.png "mostly-true"
-[wchalf-true]:https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wchalf-true.png "half-true "
-[wcmostly-true]:https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wcmostly-true.png "false"
-[wcpants-fire]:https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wcpants-fire.png "barely-true"
-[wctrue]:https://github.com/sroylee/Fake_News_Model_Zoo/blob/master/code/NLTK/graph/wctrue.png "pants-fire"
+[wcbarely-true]:Figure/wcbarely-true.png "true"
+[wcfalse]:Figure/wcfalse.png "mostly-true"
+[wchalf-true]:Figure/wchalf-true.png "half-true "
+[wcmostly-true]:Figure/wcmostly-true.png "false"
+[wcpants-fire]:Figure/wcpants-fire.png "barely-true"
+[wctrue]:Figure/wctrue.png "pants-fire"
 
 
 1.True Word Cloud
