@@ -1,5 +1,17 @@
 # Caim_Fake_News_Model_Zoo
 Caim Chen's CMPT400 project. 
+# Log for week Mar 7th
+
+1.Explore attention model and bleu score, did not observe any noticeable improvements. ( Next step: try tensorflow.keras attention layer).
+
+2.Keras attention layer followed encoder decoder format, could not adpat to fake news detection task.
+
+3.Possible causes : Encoder and decoder are designed for transltor purpose, thismight be unsuitable to categorical classfication task.
+
+4.Learned how to analysis Lair dataset from each feature provided in raw data.
+
+5.Points learned : 1. using each feature to extract truthfulness relation with the labels.(bar chart) 2.using groupby to select extreme cases from two different features then combine them with heatmap. (ex.which party would have the highest lie rate, which job would have the highest lie rate, how about the combination feature?) 3. Finding biased properties before constructing the model. ( ex. number of republican is 6 times bigger than democratic) 
+
 # Log for week Mar 1st
 
 1.Redo everything for data pre-processing. Vocabulary coverage is 78% before any pre-process been done. ( cleaned symbol,punctuation,number,different spelling in each region. Possible for further mis-spelling cleaning )
