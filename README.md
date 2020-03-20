@@ -1,5 +1,13 @@
 # Caim_Fake_News_Model_Zoo
 Caim Chen's CMPT400 project. 
+
+# Log for week Mar 13th
+
+Model Name|Baseline|With attention|Paper Result
+-|-|-|-
+CNN with Glove |0.25 |0.26 |0.27
+LSTM with Glove |0.25 |0.27 |0.23 
+
 # Log for week Mar 7th
 
 1.Explore attention model and bleu score, did not observe any noticeable improvements. ( Next step: try tensorflow.keras attention layer).
